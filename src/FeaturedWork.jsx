@@ -49,38 +49,6 @@ const constructionsAndOthers = [
         image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop"
     },
 
-    // --- Agritech ---
-    {
-        id: 2,
-        category: "Agritech",
-        title: "GreenValley Farms",
-        tagline: "Hydroponic Export Unit",
-        stat: "500 Acres",
-        description: "India's largest automated hydroponic farm producing residue-free exotic vegetables for global markets.",
-        features: ["AI-Driven Irrigation", "100% Organic", "Solar Powered"],
-        image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-        id: 21,
-        category: "Agritech",
-        title: "AgroNext Labs",
-        tagline: "R&D Facility",
-        stat: "Innovation Hub",
-        description: "Cutting-edge research facility focused on developing climate-resilient crop varieties.",
-        features: ["Genetic Research", "Soil Health Lab", "Farmer Training"],
-        image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-        id: 22,
-        category: "Agritech",
-        title: "Organic Harvest Net",
-        tagline: "Supply Chain Solution",
-        stat: "Pan-India",
-        description: "A tech-enabled supply chain connecting 10,000+ farmers directly to retailers and consumers.",
-        features: ["Blockchain Traceability", "Cold Chain", "Fair Trade"],
-        image: "https://images.unsplash.com/photo-1625246333195-584054e29425?q=80&w=1200&auto=format&fit=crop"
-    },
-
     // --- Finance ---
     {
         id: 4,
@@ -110,7 +78,7 @@ const FeaturedWork = () => {
     const [filter, setFilter] = useState("All");
     const containerRef = useRef(null);
 
-    const categories = ["All", "Construction", "Agritech", "Lalit Films", "Finance"];
+    const categories = ["All", "Construction", "Lalit Films", "Finance"];
 
     const filteredProjects = filter === "All"
         ? projects

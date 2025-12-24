@@ -15,7 +15,7 @@ const items = [
         id: "mission",
         title: "Our Mission",
         subtitle: "Excellence in Action",
-        desc: "To deliver world-class solutions across construction, agritech, finance, and media by leveraging cutting-edge technology and ethical business practices.",
+        desc: "To deliver world-class solutions across construction, education, finance, and media by leveraging cutting-edge technology and ethical business practices.",
         icon: <Target className="w-8 h-8" />,
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
     },
@@ -34,7 +34,7 @@ const VisionMission = () => {
     const [active, setActive] = useState("mission");
 
     return (
-        <section className="bg-brand-black py-24 relative border-t border-brand-border/20 overflow-hidden">
+        <section id="vision-mission" className="bg-brand-black py-24 relative border-t border-brand-border/20 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
                 <span className="text-brand-gold font-bold uppercase tracking-widest text-sm">
                     Our Philosophy
@@ -44,7 +44,7 @@ const VisionMission = () => {
                 </h2>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 h-[600px] flex flex-col md:flex-row gap-4">
+            <div className="max-w-7xl mx-auto px-6 h-auto md:h-[600px] flex flex-col md:flex-row gap-4">
                 {items.map((item) => (
                     <motion.div
                         key={item.id}

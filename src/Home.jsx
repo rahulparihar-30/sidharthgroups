@@ -11,6 +11,8 @@ import VisionMission from "./VisionMission";
 import MediaSection from "./MediaSection";
 import ContactSection from "./ContactSection";
 import Chat from "./Chat";
+import TestimonialsTicker from "./TestimonialsTicker";
+import FAQ from "./FAQ";
 
 /* ===============================
    HERO SLIDES (OUTSIDE COMPONENT)
@@ -18,30 +20,32 @@ import Chat from "./Chat";
 const heroSlides = [
   {
     image: "/construction-2.png",
-    title: "Building Value Across Industries",
-    subtitle: "From infrastructure to innovation, we are crafting the future."
+    title: "Creating Assets. Delivering Long-Term Value.",
+    subtitle: "Through Siddharth Creation, we develop residential and commercial projects designed for durability, growth, and strong returns."
   },
   {
-    image: "/Agriculture-4.png",
-    title: "Sustainable Growth",
-    subtitle: "Empowering communities through agritech and green solutions."
+    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80",
+    title: "Investing in Human Potential",
+    subtitle: "Our education and healthcare ventures are built to create lasting social impact while ensuring sustainable business growth."
   },
   {
-    image: "/franchise-1.png",
-    title: "Global Franchise Network",
-    subtitle: "Scaling success stories beyond borders."
-  },
-  {
-    image: "/rupee-4395462_1280.jpg",
-    title: "Strategic Investments",
-    subtitle: "Growing wealth through trusted business foundations."
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1600&q=80",
+    title: "Capital Managed With Discipline & Vision",
+    subtitle: "From investments to accounting services, we safeguard and grow capital through transparent and structured financial practices."
   },
   {
     image: "/lalitfilms/raeesjada.jpg",
-    title: "Stories That Inspire",
-    subtitle: "Producing cinema with vision and purpose."
+    title: "Creative Ventures With Commercial Strength",
+    subtitle: "Lalit Films produces cinema and media content that balances creativity, culture, and market viability."
+  },
+  {
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80",
+    title: "Partner With a Diversified Growth Platform",
+    subtitle: "Across infrastructure, education, finance, and media — we turn partnerships into long-term value creation."
   }
 ];
+
+
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -74,7 +78,7 @@ const Home = () => {
       {/* ===============================
           1. HERO SECTION
          =============================== */}
-      <div className="relative h-screen w-full overflow-hidden bg-black">
+      <div className="relative h-screen max-w-full overflow-hidden bg-black">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
@@ -96,7 +100,7 @@ const Home = () => {
             Siddharth Group
           </span>
 
-          <h1 className="text-4xl md:text-7xl font-serif text-white mb-6 leading-tight max-w-4xl animate-slideUp">
+          <h1 className="text-3xl md:text-7xl font-serif text-white mb-6 leading-tight max-w-4xl animate-slideUp">
             {heroSlides[currentSlide].title}
           </h1>
 
@@ -105,13 +109,13 @@ const Home = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 animate-fadeIn delay-300">
-            <button className="px-8 py-4 bg-brand-gold text-brand-black font-bold uppercase tracking-wider hover:bg-white transition-colors rounded-sm">
+            <a href="#business" className="px-8 py-4 bg-brand-gold text-brand-black font-bold uppercase tracking-wider hover:bg-white transition-colors rounded-sm">
               Explore Our Businesses
-            </button>
+            </a>
 
-            <button className="px-8 py-4 border border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors rounded-sm">
+            <a href="#contact" className="px-8 py-4 border border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors rounded-sm">
               Contact Us
-            </button>
+            </a>
           </div>
         </div>
 
@@ -136,7 +140,8 @@ const Home = () => {
          =============================== */}
       <GroupOverview />
       <BusinessVerticals />
-      <WhyChooseUs />
+      {/* <TestimonialsTicker /> */}
+      {/* <WhyChooseUs /> */}
       <OurApproach />
       <FeaturedWork />
       <LeadershipTeam />
@@ -146,8 +151,11 @@ const Home = () => {
       {/* 9. Media Section */}
       <MediaSection />
 
+      {/* 10. FAQ Section */}
+      <FAQ />
+
       {/* 10. Contact Section */}
-      <ContactSection />
+      {/* <ContactSection /> */}
 
       <Chat />
     </>

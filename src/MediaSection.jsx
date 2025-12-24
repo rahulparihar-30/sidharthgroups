@@ -6,53 +6,46 @@ import { ArrowRight, Calendar, ExternalLink, ChevronLeft, ChevronRight } from "l
 const mediaItems = [
     {
         id: 1,
-        title: "Siddharth Group announces massive expansion in Agritech sector",
-        date: "Dec 12, 2024",
-        source: "Economic Times",
-        image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=800&auto=format&fit=crop",
-        link: "#"
+        title: "Pune’s 101-Year-Old Tea Stall Continues to Brew Tradition and Taste",
+        date: "Punekar News",
+        source: "Punekar News",
+        image: "/aadhya/adhya-1.webp",
+        link: "https://www.punekarnews.in/aadya-amruttulya-punes-101-year-old-tea-stall-still-brewing-strong-with-tradition-and-taste/"
     },
     {
         id: 2,
-        title: "Lalit Films' 'The Last Dynasty' breaks box office records",
-        date: "Nov 28, 2024",
-        source: "Variety",
-        image: "/lalitfilms/raeesjada.jpg",
-        link: "#"
+        title: "This Is the Oldest Tea Shop of Pune With a Bollywood Connection",
+        date: "Times of India",
+        source: "Times of India",
+        image: "/aadhya/adhya-2.webp",
+        link: "https://timesofindia.indiatimes.com/life-style/food-news/this-is-the-oldest-tea-shop-of-pune-which-has-a-bollywood-connection-too/photostory/88977890.cms"
     },
     {
         id: 3,
-        title: "Revolutionizing Real Estate: The new Skyline Towers project",
-        date: "Oct 15, 2024",
-        source: "Construction Week",
-        image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop",
-        link: "#"
+        title: "International Tea Day: Inside Pune’s Amruttulya Tea Culture",
+        date: "Indian Express",
+        source: "Indian Express",
+        image: "/aadhya/adhya-3.webp",
+        link: "https://indianexpress.com/article/lifestyle/food-wine/international-tea-day-dipping-into-punes-amruttulya-tea-drinking-culture-6420853/"
     },
     {
         id: 4,
-        title: "Siddharth Franchise wins 'Best Business Model' award",
-        date: "Sep 05, 2024",
-        source: "Business Standard",
-        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop",
-        link: "#"
+        title: "What Links Pune, Rajasthan & Shammi Kapoor? A Chai That's 'Amruttulya'",
+        date: "ScoopWhoop Hindi",
+        source: "ScoopWhoop Hindi",
+        image: "/aadhya/adhya-4.webp",
+        link: "https://hindi.scoopwhoop.com/lifestyle/established-in-1924-head-to-adhya-amruttulya-pune-oldest-tea-shop/"
     },
     {
         id: 5,
-        title: "Giving Back: Group's new initiative for rural healthcare",
-        date: "Aug 20, 2024",
-        source: "The Hindu",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
-        link: "#"
-    },
-    {
-        id: 6,
-        title: "Interview with Chairman Mr. Lalit Kumar on future goals",
-        date: "Jul 10, 2024",
-        source: "Forbes India",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop",
-        link: "#"
+        title: "Amruttulya and Pune’s Enduring Tea Culture",
+        date: "LiveMint",
+        source: "LiveMint",
+        image: "/aadhya/adhya-5.webp",
+        link: "https://www.livemint.com/mint-lounge/food/amruttulya-pune-culture-tea-city-111691151912291.html"
     }
 ];
+
 
 const MediaSection = () => {
     const containerRef = useRef(null);
@@ -70,7 +63,7 @@ const MediaSection = () => {
     };
 
     return (
-        <section className="bg-brand-black py-24 border-t border-white/10 relative overflow-hidden">
+        <section id="media" className="bg-brand-black py-24 border-t border-white/10 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}

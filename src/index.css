@@ -6,33 +6,45 @@
   --font-oswald: "Oswald", sans-serif;
 
   /* --- Primary Accents --- */
-  --color-brand-gold: #eab308; /* Luxury Gold (Main) */
-  --color-brand-gold-light: #facc15; /* Bright Gold (Hover/Highlight) */
+  --color-brand-gold: #eab308;
+  /* Luxury Gold (Main) */
+  --color-brand-gold-light: #facc15;
+  /* Bright Gold (Hover/Highlight) */
 
   /* --- Backgrounds --- */
-  --color-brand-black: #000000; /* Obsidian (Main BG) */
-  --color-brand-surface: #09090b; /* Glass Black (Cards/Dropdowns) */
+  --color-brand-black: #000000;
+  /* Obsidian (Main BG) */
+  --color-brand-surface: #09090b;
+  /* Glass Black (Cards/Dropdowns) */
 
   /* --- Typography --- */
-  --color-brand-text: #e5e7eb; /* Platinum (Headings) */
-  --color-brand-muted: #9ca3af; /* Steel Grey (Body text) */
+  --color-brand-text: #e5e7eb;
+  /* Platinum (Headings) */
+  --color-brand-muted: #9ca3af;
+  /* Steel Grey (Body text) */
 
   /* --- Utilities --- */
-  --color-brand-border: rgba(255, 255, 255, 0.1); /* Subtle Border */
+  --color-brand-border: rgba(255, 255, 255, 0.1);
+  /* Subtle Border */
 
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
 }
 
+html,
 body {
-  @apply font-roboto p-0 m-0 bg-brand-black;
+  @apply font-roboto p-0 m-0 bg-brand-black overflow-x-hidden;
+
 }
+
+
 
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: scale(1.02);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -48,6 +60,7 @@ body {
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -63,6 +76,7 @@ body {
     transform: scale(0.8);
     opacity: 0;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -77,7 +91,23 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+
+@keyframes media-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-media-scroll {
+  animation: media-scroll 35s linear infinite;
 }

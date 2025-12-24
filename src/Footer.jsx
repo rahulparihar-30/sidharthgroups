@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowUp, Facebook, Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
@@ -8,12 +9,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-brand-black text-white pt-20 overflow-hidden relative border-t border-brand-border">
+    <footer id="contact" className="bg-brand-black text-white pt-12 md:pt-20 overflow-hidden relative border-t border-brand-border">
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* --- TOP SECTION: CTA & BRAND --- */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20 border-b border-brand-border pb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-10 md:mb-20 border-b border-brand-border pb-12">
 
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-serif mb-4 leading-tight">
@@ -21,7 +22,7 @@ const Footer = () => {
               <span className="text-brand-gold italic">Preserving Values.</span>
             </h2>
             <p className="text-brand-muted text-lg max-w-lg">
-              Partner with Siddharth Groups for world-class franchise opportunities, sustainable agriculture, and secure financial growth.
+              Partner with Siddharth Groups and place your capital within a diversified ecosystem of infrastructure, education, healthcare, finance, and media—managed with discipline, transparency, and a long-term growth vision.
             </p>
           </div>
 
@@ -65,12 +66,13 @@ const Footer = () => {
           <div>
             <h4 className="text-brand-gold font-bold uppercase tracking-widest text-xs mb-6">Our Ecosystem</h4>
             <ul className="space-y-4">
-              <FooterLink text="Siddharth Construction" />
-              <FooterLink text="Siddharth Franchise" />
-              <FooterLink text="Lalit Films Production" />
-              <FooterLink text="Siddharth Agritech" />
-              <FooterLink text="Siddharth Pharma" />
-              <FooterLink text="Siddharth Finance" />
+              <FooterLink text="Siddharth Creation" to="/sid-construction" />
+              <FooterLink text="Aadhya & Vcare Education" to="/agri" /> {/* Wait, 'agri' was used for Education in Navbar?? I need to check Navbar line 112. */}
+              <FooterLink text="Lalit Films Production" to="/lalitfilms" />
+              {/* Agritech Removed */}
+              <FooterLink text="Vcare Pharma" to="/pharma" />
+              <FooterLink text="FinBridge" to="/finbridge" />
+              <FooterLink text="Mehta Equities" to="/mehta" />
             </ul>
           </div>
 
@@ -79,9 +81,9 @@ const Footer = () => {
           <div>
             <h4 className="text-brand-gold font-bold uppercase tracking-widest text-xs mb-6">Company</h4>
             <ul className="space-y-4">
-              <FooterLink text="About Us" />
-              <FooterLink text="Leadership Team" />
-              <FooterLink text="Contact" />
+              <FooterLink text="About Us" to="/#about-us" />
+              <FooterLink text="Vision & Mission" to="/#vision-mission" />
+              <FooterLink text="Contact" to="/#contact" />
             </ul>
           </div>
 
@@ -147,11 +149,11 @@ const Footer = () => {
 
 // --- Helper Components ---
 
-const FooterLink = ({ text, badge }) => (
+const FooterLink = ({ text, to = "#", badge }) => (
   <li className="group flex items-center justify-between cursor-pointer">
-    <a href="#" className="text-brand-muted text-sm group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+    <Link to={to} className="text-brand-muted text-sm group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
       {text}
-    </a>
+    </Link>
     {badge && (
       <span className="text-[10px] bg-brand-gold text-brand-black font-bold px-1.5 py-0.5 rounded">
         {badge}

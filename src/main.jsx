@@ -10,6 +10,7 @@ import Agritech from "./businesses/Agritech.jsx";
 import Films from "./businesses/Films.jsx";
 import Franchise from "./businesses/Franchise.jsx";
 import Finance from "./businesses/Finance.jsx";
+import ComingSoon from "./ComingSoon.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "sid-construction",
+        path: "sidharth-creation",
         element: <Construction />,
       },
       {
@@ -37,12 +38,16 @@ const router = createBrowserRouter([
         element: <Agritech />,
       },
       {
-        path: "lalit-films",
+        path: "lalitfilms",
         element: <Films />,
       },
       {
         path: "finance",
         element: <Finance />,
+      },
+      {
+        path: "coming-soon",
+        element: <ComingSoon />,
       },
     ],
   },

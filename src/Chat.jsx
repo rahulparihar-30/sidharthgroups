@@ -21,7 +21,7 @@ const Chat = () => {
 
     return (
         <a
-            href="https://wa.me/919876543210?text=Hello%20Siddharth%20Group,%20I%20would%20like%20to%20know%20more."
+            href="https://wa.me/918080012133?text=Hello%20Siddharth%20Group,%20I%20would%20like%20to%20know%20more."
             target="_blank"
             rel="noopener noreferrer"
             className={`fixed bottom-8 right-8 bg-brand-gold p-4 rounded-full shadow-2xl z-50 cursor-pointer transition-all duration-500 hover:scale-110 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20 pointer-events-none'}`}

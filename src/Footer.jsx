@@ -44,20 +44,20 @@ const Footer = () => {
             <div className="flex items-start gap-3 text-brand-muted hover:text-white transition-colors cursor-pointer group">
               <MapPin size={20} className="mt-1 group-hover:text-brand-gold" />
               <span className="text-sm leading-relaxed">
-                Siddharth Corporate Park,<br />
-                Tower A, 24th Floor,<br />
-                Baner, Pune - 411045
+                Sidharth Group,<br />
+                Karve Nagar, Pune,<br />
+                Maharashtra, India - 411052
               </span>
             </div>
 
             <div className="flex items-center gap-3 text-brand-muted hover:text-white transition-colors cursor-pointer group">
               <Phone size={20} className="group-hover:text-brand-gold" />
-              <span className="text-sm">+91 22 4567 8900</span>
+              <a target="_blank" rel="noopener noreferrer" href="tel:+918080012133" className="text-sm">+91 8080012133</a>
             </div>
 
             <div className="flex items-center gap-3 text-brand-muted hover:text-white transition-colors cursor-pointer group">
               <Mail size={20} className="group-hover:text-brand-gold" />
-              <span className="text-sm">connect@siddharthgroups.com</span>
+              <a target="_blank" rel="noopener noreferrer" href="mailto:connect@sidharthgroup.in" className="text-sm">connect@sidharthgroup.in</a>
             </div>
           </div>
 
@@ -67,12 +67,14 @@ const Footer = () => {
             <h4 className="text-brand-gold font-bold uppercase tracking-widest text-xs mb-6">Our Ecosystem</h4>
             <ul className="space-y-4">
               <FooterLink text="Siddharth Creation" to="/sid-construction" />
-              <FooterLink text="Aadhya & Vcare Education" to="/agri" /> {/* Wait, 'agri' was used for Education in Navbar?? I need to check Navbar line 112. */}
+              <FooterLink text="Adhya" to="adhya.sidharthgroup.in" /> {/* Wait, 'agri' was used for Education in Navbar?? I need to check Navbar line 112. */}
               <FooterLink text="Lalit Films Production" to="/lalitfilms" />
               {/* Agritech Removed */}
-              <FooterLink text="Vcare Pharma" to="/pharma" />
-              <FooterLink text="FinBridge" to="/finbridge" />
-              <FooterLink text="Mehta Equities" to="/mehta" />
+              <FooterLink text="Vcare Education" to="https://vcareeducation.org/" />
+              <FooterLink text="Vcare Pharma" to="/coming-soon" />
+              <FooterLink text="FinBridge" to="https://finbridgeadvisor.com/" />
+              <FooterLink text="Sidharth Finance" to="https://mehtagroup.in/" />
+              <FooterLink text="Weekend Retreat" to="/coming-soon" />
             </ul>
           </div>
 
@@ -139,7 +141,7 @@ const Footer = () => {
       {/* This creates that high-end "Architectural" feel at the very bottom */}
       <div className="w-full overflow-hidden leading-none select-none opacity-[0.05] pointer-events-none border-t border-brand-border mt-10">
         <h1 className="text-[18vw] font-serif font-bold text-center text-white tracking-tight -mb-10 lg:-mb-24">
-          SIDDHARTH
+          SIDHARTH
         </h1>
       </div>
 
@@ -151,7 +153,7 @@ const Footer = () => {
 
 const FooterLink = ({ text, to = "#", badge }) => (
   <li className="group flex items-center justify-between cursor-pointer">
-    <Link to={to} className="text-brand-muted text-sm group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+    <Link to={to} className="text-brand-muted text-sm group-hover:text-orange-500 group-hover:translate-x-2 transition-all duration-300">
       {text}
     </Link>
     {badge && (

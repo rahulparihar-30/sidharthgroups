@@ -18,17 +18,17 @@ const businesses = [
     {
         id: "creation",
         category: "Creation & Infrastructure",
-        name: "Siddharth Creation",
+        name: "Sidharth Creation",
         tagline: "Built on Legacy. Designed for the Future.",
-        desc: "Backed by a 40-year construction legacy, Siddharth Creation develops residential and commercial projects focused on quality, durability, and long-term value across Mumbai and Pune.",
+        desc: "Backed by a 40-year construction legacy, Sidharth Creation develops residential and commercial projects focused on quality, durability, and long-term value across Mumbai and Pune.",
         icon: <Building2 className="w-6 h-6" />,
         image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
-        link: "/siddharth-creation"
+        link: "/sidharth-creation"
     },
     {
         id: "education",
         category: "Education",
-        name: "Adhya & Vcare Education",
+        name: "Adhya",
         tagline: "Shaping Minds for Tomorrow.",
         desc: "Our education initiatives span early learning and institutional education, delivering structured, nurturing environments focused on long-term academic and personal development.",
         icon: <GraduationCap className="w-6 h-6" />,
@@ -58,7 +58,7 @@ const businesses = [
     {
         id: "finance",
         category: "Finance & Accounting",
-        name: "FinBridge & Mehta Equities",
+        name: "FinBridge & Sidharth Finance",
         tagline: "Capital Managed with Clarity.",
         desc: "Through FinBridge and Mehta Equities, we provide investment services, accounting, and financial advisory with transparency, discipline, and long-term value focus.",
         icon: <Wallet className="w-6 h-6" />,

@@ -26,7 +26,7 @@ const constructionsAndOthers = [
         stat: "1.2M Sq.Ft",
         description: "A landmark residential project redefining luxury living with state-of-the-art amenities and sustainable architecture.",
         features: ["LEED Gold Certified", "Smart Home Automation", "Infinity Pool"],
-        image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop"
+        image: "/construction/society-1.png"
     },
     {
         id: 11,
@@ -36,7 +36,7 @@ const constructionsAndOthers = [
         stat: "800k Sq.Ft",
         description: "A nice-gen IT park designed for global enterprises, featuring ergonomic workspaces and green zones.",
         features: ["Grade A Office Space", "IGBC Platinum", "High-Speed Elevators"],
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
+        image: "/construction/society-2.png"
     },
     {
         id: 12,
@@ -47,18 +47,6 @@ const constructionsAndOthers = [
         description: "Exclusive river-facing villas offering a blend of modern design and serene natural surroundings.",
         features: ["Private Jetties", "Clubhouse", "Eco-friendly Design"],
         image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop"
-    },
-
-    // --- Finance ---
-    {
-        id: 4,
-        category: "Finance",
-        title: "Siddharth Capital",
-        tagline: "SME Growth Fund",
-        stat: "₹500Cr Fund",
-        description: "Empowering over 200 small businesses with timely capital and strategic mentorship for exponential growth.",
-        features: ["High ROI", "Risk Mitigated", "Sector Agnostic"],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: 41,
@@ -78,7 +66,7 @@ const FeaturedWork = () => {
     const [filter, setFilter] = useState("All");
     const containerRef = useRef(null);
 
-    const categories = ["All", "Construction", "Lalit Films", "Finance"];
+    const categories = ["All", "Construction", "Lalit Films", "Adhya"];
 
     const filteredProjects = filter === "All"
         ? projects
@@ -239,10 +227,6 @@ const ProjectCard = ({ data }) => {
                                 {feat}
                             </div>
                         ))}
-                    </div>
-
-                    <div className="flex items-center gap-2 text-white font-bold uppercase tracking-wider text-xs border-b border-brand-gold pb-1 w-fit group-hover:text-brand-gold transition-colors">
-                        View Case Study <ArrowUpRight size={14} />
                     </div>
                 </div>
             </div>

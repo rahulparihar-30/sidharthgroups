@@ -8,7 +8,7 @@ const stats = [
     { number: 40, label: "Years of Legacy", suffix: "+" },
     { number: 15, label: "Projects Executed & Ongoing", suffix: "+" },
     { number: 55, label: "Homes Delivered", suffix: "+" },
-    { number: 2, label: "Key Cities (Mumbai & Pune)", suffix: "" },
+    { number: 4, label: "Key Cities (Mumbai, Pune, Delhi & Benglore)", suffix: "" },
 ];
 
 const values = [
@@ -47,7 +47,7 @@ const GroupOverview = () => {
                 {/* Intro Section */}
                 <div className="text-center max-w-4xl mx-auto mb-5">
                     <span className="text-brand-gold font-bold uppercase tracking-widest text-sm">
-                        About Siddharth Group
+                        About Sidharth Group
                     </span>
 
                     <h2 className="text-4xl md:text-5xl font-serif text-white mt-4 mb-4 leading-tight">
@@ -71,7 +71,7 @@ const GroupOverview = () => {
                             with presence across infrastructure, education, finance, and media.
                             <br /><br />
                             With over 40 years of experience in construction, more than 15 completed and ongoing projects,
-                            and 55 homes delivered across Mumbai and Pune, our foundation is rooted in trust,
+                            and many homes delivered across Mumbai, Pune,Delhi and Banglore our foundation is rooted in trust,
                             execution excellence, and long-term value creation.
                             <br /><br />
                             Today, we continue to expand responsibly, guided by the same principles that have

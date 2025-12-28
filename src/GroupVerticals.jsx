@@ -7,7 +7,7 @@ import { ArrowRight, Building2, Film, Tractor, HeartPulse, Wallet, Map, Check } 
 const companies = [
   {
     id: "construction",
-    name: "Siddharth Construction",
+    name: "Sidharth Construction",
     industry: "Infrastructure & Development",
     tagline: "Building the Foundations of Tomorrow",
     description: "Our flagship entity responsible for over 12 Million Sq.Ft of premium residential and commercial infrastructure. We combine engineering precision with aesthetic mastery.",
@@ -27,7 +27,7 @@ const companies = [
   },
   {
     id: "realestate",
-    name: "Siddharth Franchise",
+    name: "Sidharth Franchise",
     industry: "Brand Expansion",
     tagline: "Global Franchise Network",
     description: "Specializing in scaling successful business models across new territories. We ensure brand consistency and operational excellence for our franchise partners.",
@@ -37,7 +37,7 @@ const companies = [
   },
   {
     id: "agro",
-    name: "Siddharth Agritech",
+    name: "Sidharth Agritech",
     industry: "Sustainable Agriculture",
     tagline: "Cultivating a Greener Future",
     description: "Bridging the gap between technology and tradition. We manage over 500 acres of sustainable farmland, producing organic, export-quality crops.",
@@ -47,7 +47,7 @@ const companies = [
   },
   {
     id: "finance",
-    name: "Siddharth Finance",
+    name: "Sidharth Finance",
     industry: "Financial Services",
     tagline: "Secure Wealth Management",
     description: "A trusted NBFC providing tailored financial solutions. From home loans to corporate investment strategies, we secure your financial horizon.",
@@ -57,7 +57,7 @@ const companies = [
   },
   {
     id: "pharma",
-    name: "Siddharth Pharma",
+    name: "Sidharth Pharma",
     industry: "Healthcare Solutions",
     tagline: "Innovating for Better Health",
     description: "Committed to making quality healthcare accessible. We specialize in the distribution of life-saving medicines and the development of healthcare facilities.",

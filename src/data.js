@@ -6,7 +6,7 @@ export const filmsData = {
 
   stats: [
     { label: "Films Produced", value: "25+" },
-    { label: "National Awards", value: "05" },
+    { label: "Awards", value: "05" },
     { label: "Global Reach", value: "12 Countries" },
     { label: "Box Office", value: "₹500Cr+" },
   ],
@@ -197,6 +197,7 @@ const filmsProduced = [
   {
     title: "Raees Jada",
     image: "/lalitfilms/raeesjada.jpg",
+    imdb:7.2,
     genre: "Action, Drama",
     releaseDate: "1980",
     cast: "Vikram Makandar, Zarina Wahab, Rakesh Roshan",
@@ -207,6 +208,7 @@ const filmsProduced = [
     title: "Maan Sanman",
     image: "/lalitfilms/maan.jpg", // Assuming maan.jpg corresponds to Maan Sanman
     genre: "Family Drama",
+    imdb:5.6,
     releaseDate: "1990",
     cast: "Rishi Kapoor, Neetu Singh",
     director: "Raja Thakur",
@@ -216,6 +218,7 @@ const filmsProduced = [
     title: "Naya Bakra",
     image: "/lalitfilms/nayabakra.jpg",
     genre: "Comedy, Satire",
+    imdb:8.9,
     releaseDate: "1985",
     cast: "Amol Palekar, Utpal Dutt",
     director: "Basu Chatterjee",
@@ -223,6 +226,7 @@ const filmsProduced = [
   }, {
     title: "Bala Jo Jo Re",
     image: "/lalitfilms/bala.jpg",
+    imdb:8.8,
     genre: "Family Drama",
     releaseDate: "1951",
     cast: "Suryakant, Sulochana",
@@ -232,6 +236,7 @@ const filmsProduced = [
     title: "Sindbad",
     image: "/lalitfilms/sindbad.jpg",
     genre: "Adventure, Fantasy",
+    imdb:9.9,
     releaseDate: "1952",
     cast: "Ranjan, Naseem Banu",
     director: "Nanabhai Bhatt",
@@ -239,6 +244,7 @@ const filmsProduced = [
   }, {
     title: "Earth",
     image: "/lalitfilms/earth.png",
+    imdb:6.6,
     genre: "Adventure, Fantasy",
     releaseDate: "1953",
     cast: "Ranjan, Naseem Banu",

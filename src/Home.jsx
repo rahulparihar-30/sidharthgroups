@@ -13,6 +13,7 @@ import ContactSection from "./ContactSection";
 import Chat from "./Chat";
 import TestimonialsTicker from "./TestimonialsTicker";
 import FAQ from "./FAQ";
+import GroupVerticals from "./GroupVerticals";
 
 /* ===============================
    HERO SLIDES (OUTSIDE COMPONENT)
@@ -97,7 +98,7 @@ const Home = () => {
         {/* HERO CONTENT */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-20">
           <span className="text-brand-gold font-bold uppercase tracking-[0.25em] mb-4 animate-fadeIn">
-            Siddharth Group
+            Sidharth Group
           </span>
 
           <h1 className="text-3xl md:text-7xl font-serif text-white mb-6 leading-tight max-w-4xl animate-slideUp">
@@ -138,6 +139,7 @@ const Home = () => {
       {/* ===============================
           PAGE SECTIONS
          =============================== */}
+      {/* <GroupVerticals /> */}
       <GroupOverview />
       <BusinessVerticals />
       {/* <TestimonialsTicker /> */}

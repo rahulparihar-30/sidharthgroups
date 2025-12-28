@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import LinkItem from "./LinkItem";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,9 +36,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link to="/" className="flex-shrink-0 cursor-pointer z-50" onClick={() => setIsOpen(false)}>
+        <Link to="/" className="flex-shrink-0 cursor-pointer z-50 flex flex-row items-center gap-2" onClick={() => setIsOpen(false)}>
+          <img src="/icon.png" alt="Sidharth Group Icon" className="w-12 h-12" />
           <span className="text-2xl font-serif font-bold tracking-wider text-yellow-500">
-            SIDDHARTH <span className="text-white">GROUPS</span>
+            SIDHARTH <span className="text-white">GROUP</span>
           </span>
         </Link>
 
@@ -67,7 +69,7 @@ const Navbar = () => {
               </div>
 
               {/* Col 3: Leadership (With Image) */}
-              <div className="col-span-6 pl-4">
+              {/* <div className="col-span-6 pl-4">
                 <h3 className="text-yellow-500 font-bold mb-6 uppercase tracking-wider text-xs">Our Leaders</h3>
                 <div className="flex gap-6">
                   <div className="flex-1 group/leader cursor-pointer">
@@ -93,35 +95,21 @@ const Navbar = () => {
                     <p className="text-xs text-gray-500">Managing Director</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </NavItem>
 
           {/* --- 2. BUSINESSES --- */}
           <NavItem title="Our Businesses" isMegaMenu>
             <div className="grid grid-cols-3 gap-12 w-full max-w-6xl mx-auto">
-              <div>
-                <h3 className="text-yellow-500 font-bold mb-4 uppercase tracking-wider text-xs border-b border-gray-800 pb-2">Creation & Infra</h3>
-                <div className="flex flex-col gap-3">
-                  <LinkItem to="/sid-construction" title="Siddharth Creation" subtitle="Residential & Commercial" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-yellow-500 font-bold mb-4 uppercase tracking-wider text-xs border-b border-gray-800 pb-2">Education & Healthcare</h3>
-                <div className="flex flex-col gap-3">
-                  <LinkItem to="/agri" title="Aadhya Education" subtitle="Educational Institution" />
-                  <LinkItem to="/pharma" title="Vcare Education" subtitle="Day Care & Nursery" />
-                  <LinkItem to="/pharma" title="Vcare Pharma" subtitle="Pharmaceutical Services" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-yellow-500 font-bold mb-4 uppercase tracking-wider text-xs border-b border-gray-800 pb-2">Films & Finance</h3>
-                <div className="flex flex-col gap-3">
-                  <LinkItem to="/lalitfilms" title="Lalit Films" subtitle="Film Production" />
-                  <LinkItem to="/finbridge" title="FinBridge" subtitle="Investment Services" />
-                  <LinkItem to="/mehta" title="Mehta Equities" subtitle="Accounting Services" />
-                </div>
-              </div>
+              <LinkItem to="/sidharth-creation" title="Sidharth Creation" subtitle="Residential & Commercial" />
+              <LinkItem to="/agri" title="Aadhya" subtitle="Organics" />
+              <LinkItem to="https://vcareeducation.org/" title="Vcare Education" subtitle="Day Care & Nursery" />
+              <LinkItem to="/coming-soon" title="Vcare Pharma" subtitle="Pharmaceutical Services" />
+              <LinkItem to="/lalitfilms" title="Lalit Films" subtitle="Film Production" />
+              <LinkItem to="https://finbridgeadvisor.com/" title="FinBridge" subtitle="Investment Services" />
+              <LinkItem to="https://mehtagroup.in/" title="Sidharth Finance" subtitle="Accounting Services" />
+              <LinkItem to="/coming-soon" title="Weekend Retreat" subtitle="Farm House" />
             </div>
           </NavItem>
 
@@ -195,7 +183,7 @@ const Navbar = () => {
               <div>
                 <h4 className="text-yellow-500 text-xs font-bold uppercase mb-2">Creation & Infra</h4>
                 <div className="pl-4 border-l border-white/10 flex flex-col gap-3">
-                  <LinkItem to="/sid-construction" title="Siddharth Creation" />
+                  <LinkItem to="/sidharth-creation" title="Sidharth Creation" />
                 </div>
               </div>
               <div>
@@ -203,7 +191,7 @@ const Navbar = () => {
                 <div className="pl-4 border-l border-white/10 flex flex-col gap-3">
                   <LinkItem to="/agri" title="Aadhya Education" />
                   <LinkItem to="/pharma" title="Vcare Education" />
-                  <LinkItem to="/pharma" title="Vcare Pharma" />
+                  <LinkItem to="/coming-soon" title="Vcare Pharma" />
                 </div>
               </div>
               <div>
@@ -296,28 +284,5 @@ const NavItem = ({ title, children, isMegaMenu = false }) => {
   );
 };
 
-const LinkItem = ({ title, subtitle, to = "#" }) => {
-  const handleClick = (e) => {
-    if (to.startsWith("/#") || to.startsWith("#")) {
-      const id = to.split("#")[1];
-      const element = document.getElementById(id);
-      if (element) {
-        e.preventDefault();
-        element.scrollIntoView({ behavior: "smooth" });
-        window.history.pushState(null, "", to);
-      }
-    }
-  };
-
-  return (
-    <Link to={to} onClick={handleClick} className="group/link block">
-      <div className="text-gray-400 font-medium text-sm group-hover/link:text-white transition-colors flex items-center gap-2">
-        <span className="w-1 h-1 rounded-full bg-yellow-500 opacity-0 group-hover/link:opacity-100 transition-opacity"></span>
-        {title}
-      </div>
-      {subtitle && <div className="text-gray-600 text-xs mt-0.5 ml-3 group-hover/link:text-gray-500">{subtitle}</div>}
-    </Link>
-  );
-};
 
 export default Navbar;

@@ -49,12 +49,10 @@ const Footer = () => {
                 Maharashtra, India - 411052
               </span>
             </div>
-
             <div className="flex items-center gap-3 text-brand-muted hover:text-white transition-colors cursor-pointer group">
               <Phone size={20} className="group-hover:text-brand-gold" />
               <a target="_blank" rel="noopener noreferrer" href="tel:+918080012133" className="text-sm">+91 8080012133</a>
             </div>
-
             <div className="flex items-center gap-3 text-brand-muted hover:text-white transition-colors cursor-pointer group">
               <Mail size={20} className="group-hover:text-brand-gold" />
               <a target="_blank" rel="noopener noreferrer" href="mailto:connect@sidharthgroup.in" className="text-sm">connect@sidharthgroup.in</a>
@@ -73,8 +71,8 @@ const Footer = () => {
               <FooterLink text="Vcare Education" to="https://vcareeducation.org/" />
               <FooterLink text="Vcare Pharma" to="/coming-soon" />
               <FooterLink text="FinBridge" to="https://finbridgeadvisor.com/" />
-              <FooterLink text="Sidharth Finance" to="https://mehtagroup.in/" />
-              <FooterLink text="Weekend Retreat" to="/coming-soon" />
+              <FooterLink text="Sidharth Finance" to="/finance" />
+              <FooterLink text="Weekend Retreat" to="/weekend-retreat" />
             </ul>
           </div>
 

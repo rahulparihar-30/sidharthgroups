@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ShieldCheck, TrendingUp, Leaf, Lightbulb } from "lucide-react";
 
 const stats = [
-    { number: 40, label: "Years of Legacy", suffix: "+" },
+    { number: 101, label: "Years of Legacy", suffix: "+" },
     { number: 15, label: "Projects Executed & Ongoing", suffix: "+" },
     { number: 55, label: "Homes Delivered", suffix: "+" },
     { number: 4, label: "Key Cities (Mumbai, Pune, Delhi & Benglore)", suffix: "" },
@@ -58,7 +58,7 @@ const GroupOverview = () => {
                     </h2>
 
                     <p className="text-brand-gold uppercase tracking-widest text-xs mb-6">
-                        A 40-Year Construction Legacy, Now a Diversified Growth Platform
+                        A 101-Year Legacy, Now a Diversified Growth Platform
                     </p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start pb-5">
@@ -70,7 +70,7 @@ const GroupOverview = () => {
                             What began as a focused construction enterprise has evolved into a diversified group
                             with presence across infrastructure, education, finance, and media.
                             <br /><br />
-                            With over 40 years of experience in construction, more than 15 completed and ongoing projects,
+                            With over 101 years of experience in construction, more than 15 completed and ongoing projects,
                             and many homes delivered across Mumbai, Pune,Delhi and Banglore our foundation is rooted in trust,
                             execution excellence, and long-term value creation.
                             <br /><br />

@@ -13,7 +13,7 @@ const Construction = () => {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="/construction-1.mp4"
+          src="/main_2.mp4"
           autoPlay
           loop
           muted

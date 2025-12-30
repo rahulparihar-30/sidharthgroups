@@ -20,7 +20,7 @@ const businesses = [
         category: "Creation & Infrastructure",
         name: "Sidharth Creation",
         tagline: "Built on Legacy. Designed for the Future.",
-        desc: "Backed by a 40-year construction legacy, Sidharth Creation develops residential and commercial projects focused on quality, durability, and long-term value across Mumbai and Pune.",
+        desc: "Backed by a 101-year construction legacy, Sidharth Creation develops residential and commercial projects focused on quality, durability, and long-term value across Mumbai and Pune.",
         icon: <Building2 className="w-6 h-6" />,
         image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
         link: "/sidharth-creation"

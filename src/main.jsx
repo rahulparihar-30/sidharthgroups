@@ -10,6 +10,7 @@ import Agritech from "./businesses/Agritech.jsx";
 import Films from "./businesses/Films.jsx";
 import Franchise from "./businesses/Franchise.jsx";
 import Finance from "./businesses/Finance.jsx";
+import WeekendRetreat from "./businesses/WeekendRetreat.jsx";
 import ComingSoon from "./ComingSoon.jsx";
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "finance",
         element: <Finance />,
+      },
+      {
+        path: "weekend-retreat",
+        element: <WeekendRetreat />,
       },
       {
         path: "coming-soon",

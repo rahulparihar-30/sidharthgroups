@@ -38,8 +38,8 @@ const Navbar = () => {
         {/* Brand Logo */}
         <Link to="/" className="flex-shrink-0 cursor-pointer z-50 flex flex-row items-center gap-2" onClick={() => setIsOpen(false)}>
           <img src="/icon.png" alt="Sidharth Group Icon" className="w-12 h-12" />
-          <span className="text-2xl font-serif font-bold tracking-wider text-yellow-500">
-            SIDHARTH <span className="text-white">GROUP</span>
+          <span className="text-2xl font-roboto font-bold tracking-wider text-yellow-500">
+            Sidharth <span className="text-white">Group</span>
           </span>
         </Link>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
                 <div className="relative pl-4 border-l border-gray-700">
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-white block">1983-2025</span>
-                    <p className="text-gray-400 text-sm mt-1">40+ Years of Excellence in building the skyline.</p>
+                    <p className="text-gray-400 text-sm mt-1">101+ Years of Excellence in building the skyline.</p>
                   </div>
                 </div>
               </div>
@@ -108,8 +108,8 @@ const Navbar = () => {
               <LinkItem to="/coming-soon" title="Vcare Pharma" subtitle="Pharmaceutical Services" />
               <LinkItem to="/lalitfilms" title="Lalit Films" subtitle="Film Production" />
               <LinkItem to="https://finbridgeadvisor.com/" title="FinBridge" subtitle="Investment Services" />
-              <LinkItem to="https://mehtagroup.in/" title="Sidharth Finance" subtitle="Accounting Services" />
-              <LinkItem to="/coming-soon" title="Weekend Retreat" subtitle="Farm House" />
+              <LinkItem to="/finance" title="Sidharth Finance" subtitle="Accounting Services" />
+              <LinkItem to="/weekend-retreat" title="Weekend Retreat" subtitle="Farm House" />
             </div>
           </NavItem>
 
@@ -139,8 +139,8 @@ const Navbar = () => {
             </div>
           </NavItem>
 
-          <li className="cursor-pointer hover:text-yellow-500 transition-colors uppercase text-sm font-semibold tracking-wide">Media</li>
-          <li className="cursor-pointer hover:text-yellow-500 transition-colors uppercase text-sm font-semibold tracking-wide">Contact</li>
+          <NavItem title="Media" to="/#media" />
+          <NavItem title="Contact" to="/#contact" />
         </ul>
 
         {/* Mobile Toggle Button */}
@@ -166,10 +166,10 @@ const Navbar = () => {
             onToggle={() => toggleAccordion(0)}
           >
             <div className="pl-4 flex flex-col gap-4 border-l border-white/10 ml-2 mt-2">
-              <LinkItem to="#" title="About Us" />
-              <LinkItem to="#" title="Vision, Mission & Values" />
-              <LinkItem to="#" title="Our Product Brands" />
-              <LinkItem to="#" title="Leadership" />
+              <LinkItem to="#" title="About Us" onClick={() => setIsOpen(false)} />
+              <LinkItem to="#" title="Vision, Mission & Values" onClick={() => setIsOpen(false)} />
+              <LinkItem to="#" title="Our Product Brands" onClick={() => setIsOpen(false)} />
+              <LinkItem to="#" title="Leadership" onClick={() => setIsOpen(false)} />
             </div>
           </MobileAccordion>
 
@@ -183,23 +183,24 @@ const Navbar = () => {
               <div>
                 <h4 className="text-yellow-500 text-xs font-bold uppercase mb-2">Creation & Infra</h4>
                 <div className="pl-4 border-l border-white/10 flex flex-col gap-3">
-                  <LinkItem to="/sidharth-creation" title="Sidharth Creation" />
+                  <LinkItem to="/sidharth-creation" title="Sidharth Creation" onClick={() => setIsOpen(false)} />
                 </div>
               </div>
               <div>
                 <h4 className="text-yellow-500 text-xs font-bold uppercase mb-2">Education & Healthcare</h4>
                 <div className="pl-4 border-l border-white/10 flex flex-col gap-3">
-                  <LinkItem to="/agri" title="Aadhya Education" />
-                  <LinkItem to="/pharma" title="Vcare Education" />
-                  <LinkItem to="/coming-soon" title="Vcare Pharma" />
+                  <LinkItem to="/agri" title="Aadhya Education" onClick={() => setIsOpen(false)} />
+                  <LinkItem to="/pharma" title="Vcare Education" onClick={() => setIsOpen(false)} />
+                  <LinkItem to="/coming-soon" title="Vcare Pharma" onClick={() => setIsOpen(false)} />
                 </div>
               </div>
               <div>
                 <h4 className="text-yellow-500 text-xs font-bold uppercase mb-2">Films & Finance</h4>
                 <div className="pl-4 border-l border-white/10 flex flex-col gap-3">
-                  <LinkItem to="/lalitfilms" title="Lalit Films" />
-                  <LinkItem to="/finbridge" title="FinBridge" />
-                  <LinkItem to="/mehta" title="Mehta Equities" />
+                  <LinkItem to="/lalitfilms" title="Lalit Films" onClick={() => setIsOpen(false)} />
+                  <LinkItem to="https://finbridgeadvisor.com/" title="FinBridge" onClick={() => setIsOpen(false)} />
+                  <LinkItem to="/finance" title="Sidharth Finance" onClick={() => setIsOpen(false)} />
+                  <LinkItem to="/weekend-retreat" title="Weekend Retreat" onClick={() => setIsOpen(false)} />
                 </div>
               </div>
             </div>
@@ -215,8 +216,8 @@ const Navbar = () => {
               <div>
                 <h4 className="text-yellow-500 text-xs font-bold uppercase mb-2">Ongoing Projects</h4>
                 <div className="pl-4 border-l border-white/10 flex flex-col gap-3">
-                  <LinkItem to="#" title="Commercial Towers" />
-                  <LinkItem to="#" title="Residential Towers" />
+                  <LinkItem to="#" title="Commercial Towers" onClick={() => setIsOpen(false)} />
+                  <LinkItem to="#" title="Residential Towers" onClick={() => setIsOpen(false)} />
                 </div>
               </div>
             </div>
@@ -265,21 +266,47 @@ const MobileAccordion = ({ title, isOpen, onToggle, children }) => {
   );
 };
 
-const NavItem = ({ title, children, isMegaMenu = false }) => {
+const NavItem = ({ title, children, isMegaMenu = false, to }) => {
+  const isExternal = to && (to.startsWith("http") || to.startsWith("https"));
+
   return (
     <li className="group h-full flex items-center cursor-pointer">
-      <span className="uppercase text-sm font-semibold tracking-wide text-gray-200 group-hover:text-yellow-500 transition-colors py-2 relative">
-        {title}
-        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-      </span>
+      {to ? (
+        isExternal ? (
+          <a
+            href={to}
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" text-sm font-medium tracking-wide text-gray-200 group-hover:text-yellow-500 transition-colors py-2 relative"
+          >
+            {title}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        ) : (
+          <Link
+            to={to}
+            className=" text-sm font-medium tracking-wide text-gray-200 group-hover:text-yellow-500 transition-colors py-2 relative"
+          >
+            {title}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+        )
+      ) : (
+        <span className=" text-sm font-medium tracking-wide text-gray-200 group-hover:text-yellow-500 transition-colors py-2 relative">
+          {title}
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+        </span>
+      )}
 
-      <div
-        className={`fixed left-0 top-20 w-full bg-black/95 backdrop-blur-xl border-t border-white/10 shadow-2xl transition-all duration-300 ease-in-out
+      {children && (
+        <div
+          className={`fixed left-0 top-20 w-full bg-black/95 backdrop-blur-xl border-t border-white/10 shadow-2xl transition-all duration-300 ease-in-out
         invisible opacity-0 translate-y-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
         ${isMegaMenu ? "py-12" : "p-6"}`}
-      >
-        <div className={isMegaMenu ? "container mx-auto px-6" : ""}>{children}</div>
-      </div>
+        >
+          <div className={isMegaMenu ? "container mx-auto px-6" : ""}>{children}</div>
+        </div>
+      )}
     </li>
   );
 };

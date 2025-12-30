@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
-const LinkItem = ({ title, subtitle, to = "#", hoverColor = "orange" }) => {
+const LinkItem = ({ title, subtitle, to = "#", hoverColor = "orange", onClick }) => {
     const handleClick = (e) => {
+        if (onClick) onClick(e);
+
         if (to.startsWith("/#") || to.startsWith("#")) {
             const id = to.split("#")[1];
             const element = document.getElementById(id);
@@ -24,6 +26,35 @@ const LinkItem = ({ title, subtitle, to = "#", hoverColor = "orange" }) => {
 
 
     const hoverClass = hoverMap[hoverColor] || hoverMap.orange;
+
+    const isExternal = to.startsWith("http") || to.startsWith("https");
+
+    if (isExternal) {
+        return (
+            <a
+                href={to}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleClick}
+                className="group/link block transition-transform hover:-translate-y-0.5"
+            >
+                <div
+                    className={`text-gray-400 font-medium text-sm transition-colors flex items-center gap-2 ${hoverClass}`}
+                >
+                    <span className="w-1 h-1 rounded-full bg-yellow-500 opacity-0 group-hover/link:opacity-100 transition-opacity"></span>
+                    {title}
+                </div>
+
+                {subtitle && (
+                    <div
+                        className={`text-gray-600 text-xs mt-0.5 ml-3 transition-colors ${hoverClass}`}
+                    >
+                        {subtitle}
+                    </div>
+                )}
+            </a>
+        );
+    }
 
     return (
         <Link

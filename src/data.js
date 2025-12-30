@@ -193,11 +193,58 @@ export const franchiseData = {
   ]
 };
 
+export const weekendRetreatData = {
+  name: "Weekend Retreat",
+  tagline: "Escape the Ordinary. Embrace the Extraordinary.",
+  heroImage: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&q=80&w=2000", // Pool/Villa
+  aboutText: "Rediscover the joy of togetherness at Weekend Retreat. Nestled in nature's lap, our luxury farm stays offer the perfect blend of tranquility and festivity. Whether it's a sun-soaked pool party, a cozy bonfire night, or a grand family reunion, we craft experiences that turn into cherished memories.",
+
+  stats: [
+    { label: "Happy Guests", value: "12k+" },
+    { label: "Events Hosted", value: "500+" },
+    { label: "Acres of Greenery", value: "25+" },
+    { label: "Luxury Villas", value: "10" },
+  ],
+
+  services: [
+    {
+      title: "Private Pool Parties",
+      desc: "Dive into fun with exclusive pool access, DJ setups, and floating brunches."
+    },
+    {
+      title: "Bonfire Nights",
+      desc: "Cozy evenings under the stars with acoustic music and barbeque grills."
+    },
+    {
+      title: "Corporate Offsites",
+      desc: "Team-building retreats with conference facilities and outdoor adventure activities."
+    },
+    {
+      title: "Family Staycations",
+      desc: "Kid-friendly villas with large lawns, indoor games, and personalized meal plans."
+    },
+  ],
+
+  gallery: [
+    "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=800", // Pool
+    "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=800", // Party
+    "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=800", // Food
+  ],
+  extendedGallery: [
+    { src: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800", caption: "Luxury Villa Interior" },
+    { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=800", caption: "Spacious Lawn" },
+    { src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800", caption: "Spa & Wellness" },
+    { src: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&q=80&w=800", caption: "Master Bedroom" },
+    { src: "https://images.unsplash.com/photo-1533174072545-e8d98597397b?auto=format&fit=crop&q=80&w=800", caption: "Event Setup" },
+    { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=800", caption: "Bonfire & BBQ" },
+  ]
+};
+
 const filmsProduced = [
   {
     title: "Raees Jada",
     image: "/lalitfilms/raeesjada.jpg",
-    imdb:7.2,
+    imdb: 7.2,
     genre: "Action, Drama",
     releaseDate: "1980",
     cast: "Vikram Makandar, Zarina Wahab, Rakesh Roshan",
@@ -208,7 +255,7 @@ const filmsProduced = [
     title: "Maan Sanman",
     image: "/lalitfilms/maan.jpg", // Assuming maan.jpg corresponds to Maan Sanman
     genre: "Family Drama",
-    imdb:5.6,
+    imdb: 5.6,
     releaseDate: "1990",
     cast: "Rishi Kapoor, Neetu Singh",
     director: "Raja Thakur",
@@ -218,7 +265,7 @@ const filmsProduced = [
     title: "Naya Bakra",
     image: "/lalitfilms/nayabakra.jpg",
     genre: "Comedy, Satire",
-    imdb:8.9,
+    imdb: 8.9,
     releaseDate: "1985",
     cast: "Amol Palekar, Utpal Dutt",
     director: "Basu Chatterjee",
@@ -226,7 +273,7 @@ const filmsProduced = [
   }, {
     title: "Bala Jo Jo Re",
     image: "/lalitfilms/bala.jpg",
-    imdb:8.8,
+    imdb: 8.8,
     genre: "Family Drama",
     releaseDate: "1951",
     cast: "Suryakant, Sulochana",
@@ -236,7 +283,7 @@ const filmsProduced = [
     title: "Sindbad",
     image: "/lalitfilms/sindbad.jpg",
     genre: "Adventure, Fantasy",
-    imdb:9.9,
+    imdb: 9.9,
     releaseDate: "1952",
     cast: "Ranjan, Naseem Banu",
     director: "Nanabhai Bhatt",
@@ -244,7 +291,7 @@ const filmsProduced = [
   }, {
     title: "Earth",
     image: "/lalitfilms/earth.png",
-    imdb:6.6,
+    imdb: 6.6,
     genre: "Adventure, Fantasy",
     releaseDate: "1953",
     cast: "Ranjan, Naseem Banu",

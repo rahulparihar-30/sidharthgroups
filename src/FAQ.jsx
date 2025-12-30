@@ -11,7 +11,7 @@ const faqs = [
     {
         question: "How long has the group been established?",
         answer:
-            "Our journey began over 40 years ago in 1983. Founded by Mr. Lalit Kumar, the group has grown from a construction enterprise into a multi-vertical organization serving thousands of customers across India.",
+            "Our journey began over 101 years ago in 1924. Founded by Mr. Lalit Kumar, the group has grown from a construction enterprise into a multi-vertical organization serving thousands of customers across India.",
     },
     {
         question: "Where are your key projects located?",
